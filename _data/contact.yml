@@ -1,40 +1,25 @@
-#  The contact options.
+# Left-sidebar social/contact icons. Comment out anything you don't want shown.
+# The 'noopener' attribute is added automatically.
 
 - type: github
   icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+  url: "https://github.com/chisomonuegbu"
 
 - type: email
   icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+  noblank: true
+  url: "mailto:chisom@chisomonuegbu.dev"
 
 - type: rss
   icon: "fas fa-rss"
-  noblank: true
-# Uncomment and complete the url below to enable more contact options
-#
-# - type: mastodon
-#   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
+  url: "/feed.xml"
+
+# Uncomment when you're ready to add these:
 #
 # - type: linkedin
-#   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Linkedin homepage
+#   icon: "fab fa-linkedin-in"
+#   url: "https://linkedin.com/in/chisomonuegbu"
 #
-# - type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
-#
-# - type: bluesky
-#   icon: 'fa-brands fa-bluesky'
-#   url: ''                   # Fill with your Bluesky profile link
-#
-# - type: reddit
-#   icon: 'fa-brands fa-reddit'
-#   url: ''                   # Fill with your Reddit profile link
-#
-# - type: threads
-#   icon: 'fa-brands fa-threads'
-#   url: ''                   # Fill with your Threads profile link
+# - type: mastodon
+#   icon: "fab fa-mastodon"
+#   url: "https://mastodon.social/@chisomonuegbu"

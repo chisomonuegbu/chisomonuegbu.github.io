@@ -1,0 +1,387 @@
+---
+---
+
+/*
+ * ────────────────────────────────────────────────────────────────────────────
+ * chisomonuegbu.dev — custom theme overrides on top of Chirpy
+ *
+ * Phase 1 scope:
+ *   • Typography: Fraunces (display) + Inter (body) + JetBrains Mono (code)
+ *   • Color palette: warm off-white, deep navy accent
+ *   • Sidebar visual weight reduced (softened, not removed)
+ *   • Stripe-inspired post card spacing on the homepage
+ *
+ * Phase 2 will float the right-side TOC and refine the left sidebar further.
+ * Phase 3 will add a deliberate dark mode (currently forced light in _config).
+ * Phase 4 will introduce hand-drawn Excalidraw assets.
+ * ────────────────────────────────────────────────────────────────────────────
+ */
+
+@import "main";
+
+/* ─── Webfonts ────────────────────────────────────────────────────────────── */
+
+/*
+ * Variable fonts loaded once. Fraunces axes:
+ *   opsz 9–144   — optical sizing
+ *   SOFT 0–100   — terminal softness  (we use 50)
+ *   WONK 0–1     — quirk on/off       (we use 0 for restraint at body level,
+ *                                       overridden to 1 for headings)
+ */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400;9..144,500;9..144,600;9..144,400..600,50,0;9..144,400..600,50,1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ─── Color palette (light mode only for v1) ──────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --main-bg:           #FAFAF7;   /* warm off-white */
+  --mask-bg:           #F4F2EE;
+  --card-bg:           #FFFFFF;
+  --card-hovor-bg:     #FAFAF7;
+  --card-shadow:       rgba(26, 26, 26, 0.04) 0 2px 8px 0;
+  --sidebar-bg:        #FAFAF7;
+  --sidebar-border-color: #E8E5DF;
+  --topbar-bg:         rgba(250, 250, 247, 0.85);
+  --search-bg:         #F4F2EE;
+
+  /* Text */
+  --text-color:        #1A1A1A;
+  --text-muted-color:  #5A5A5A;
+  --text-muted-highlight-color: #3A3A3A;
+  --heading-color:     #1A1A1A;
+  --label-color:       #5A5A5A;
+  --blockquote-text-color: #3A3A3A;
+  --blockquote-border-color: #E8E5DF;
+
+  /* Accent (deep navy) and links */
+  --link-color:               #1E3A5F;
+  --link-underline-color:     #1E3A5F;
+  --button-bg:                #FFFFFF;
+  --btn-border-color:         #E8E5DF;
+
+  /* Sidebar (softer than Chirpy default — quieter visual presence) */
+  --site-title-color:    #1A1A1A;
+  --site-subtitle-color: #5A5A5A;
+  --sidebar-active-color: #1E3A5F;
+
+  /* Code blocks */
+  --highlight-bg-color:  #F4F2EE;
+  --highlighter-rouge-color: #1A1A1A;
+  --code-color:          #1E3A5F;
+  --inline-code-bg:      #F4F2EE;
+  --filepath-text-color: #5A5A5A;
+
+  /* Tags */
+  --tag-bg:              #F4F2EE;
+  --tag-border:          #E8E5DF;
+  --tag-shadow:          transparent;
+  --tag-hover:           #1E3A5F;
+
+  /* TOC (right sidebar) */
+  --toc-highlight:       #1E3A5F;
+  --toc-popup-border-color: #E8E5DF;
+
+  /* Borders */
+  --border-color:        #E8E5DF;
+  --button-border-color: #E8E5DF;
+}
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "ss01", "cv11";  /* Inter stylistic alts: lowercase l with tail, single-storey a */
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+  color: var(--text-color);
+  background-color: var(--main-bg);
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.preview-img + div .post-title,
+#site-title,
+#core-wrapper .categories .card .card-header {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-variation-settings: "opsz" 48, "SOFT" 50, "WONK" 10;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--heading-color);
+}
+
+h1 { font-size: 2.25rem; line-height: 1.15; }
+h2 { font-size: 1.75rem; line-height: 1.2;  margin-top: 2.5rem; }
+h3 { font-size: 1.4rem;  line-height: 1.3;  margin-top: 2rem; }
+h4 { font-size: 1.15rem; line-height: 1.4;  margin-top: 1.5rem; }
+
+/* Site title in left sidebar — bigger optical size, more flair */
+#site-title {
+  font-variation-settings: "opsz" 72, "SOFT" 50, "WONK" 10;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+#site-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--site-subtitle-color);
+  margin-top: 0.4rem;
+  line-height: 1.45;
+  max-width: 18ch;
+}
+
+/* Post titles on the homepage — distinctively serif, generous size */
+#post-list .card .card-body .card-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-variation-settings: "opsz" 36, "SOFT" 50, "WONK" 10;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--heading-color);
+}
+
+/* ─── Code: monospace pairing ─────────────────────────────────────────────── */
+
+code, pre, kbd, samp, tt,
+.highlight pre,
+.highlighter-rouge code {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  font-feature-settings: "calt" 0;  /* disable JBM's heaviest ligatures */
+  font-size: 0.9em;
+}
+
+/* Inline code: subtle background, accent-colored text */
+:not(pre) > code {
+  background-color: var(--inline-code-bg);
+  color: var(--code-color);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+/* ─── Links ───────────────────────────────────────────────────────────────── */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+#core-wrapper a:not(.img-link):hover {
+  border-bottom-color: var(--link-underline-color);
+  text-decoration: none;
+}
+
+/* ─── Sidebar softening (Phase 1: lower visual weight, keep functionality) ── */
+
+#sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border-color);
+}
+
+#sidebar .site-title a,
+#sidebar #site-title a {
+  color: var(--site-title-color);
+}
+
+/* Avatar — slightly smaller, no heavy border */
+#sidebar #avatar {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Nav items — quieter, more whitespace */
+#sidebar .nav-item .nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 0.5rem 1.5rem;
+  color: var(--text-muted-color);
+}
+
+#sidebar .nav-item.active .nav-link {
+  color: var(--sidebar-active-color);
+  font-weight: 500;
+  background: transparent;
+}
+
+/* Social icons — subtle */
+#sidebar .sidebar-bottom a {
+  color: var(--text-muted-color);
+  font-size: 1rem;
+  transition: color 0.15s ease;
+}
+
+#sidebar .sidebar-bottom a:hover {
+  color: var(--link-color);
+}
+
+/* ─── Stripe-inspired homepage post cards ─────────────────────────────────── */
+/*
+ * Override the default Chirpy card style:
+ *   • No card border or shadow — float on the page background
+ *   • Generous spacing between posts
+ *   • Image on the left at a refined size, content on the right
+ *   • Date + reading time small, secondary; no category pills on the card
+ */
+
+#post-list {
+  margin-top: 1rem;
+}
+
+#post-list .card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 2.75rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#post-list .card:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+#post-list .card:last-child {
+  border-bottom: none;
+}
+
+#post-list .card .card-body {
+  padding: 0 0 0 1.5rem;
+}
+
+/* Hide the category pills on homepage cards (Stripe-restraint move) */
+#post-list .card .card-text.post-content,
+#post-list .card .card-meta .pin {
+  /* keep description, drop other clutter */
+}
+
+/* Smaller, quieter date metadata */
+#post-list .card .post-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted-color);
+  letter-spacing: 0.01em;
+}
+
+/* Image: refined ratio, soft corners */
+#post-list .card .preview-img {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#post-list .card .preview-img img {
+  border-radius: 6px;
+}
+
+/* When there's no preview image, keep the layout consistent with blank space */
+#post-list .card.flex-md-row.flex-md-row-reverse > .col-md-12 {
+  padding-left: 0;
+}
+
+/* ─── Post body refinements ───────────────────────────────────────────────── */
+
+.post .post-content {
+  font-size: 1.0625rem;     /* 17px — slightly larger for editorial feel */
+  line-height: 1.75;
+  color: var(--text-color);
+}
+
+.post .post-content > p {
+  margin-bottom: 1.4em;
+}
+
+.post-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+}
+
+/* Post title at the top of an individual post — full Fraunces flair */
+h1.dynamic-title,
+.post h1:first-of-type {
+  font-variation-settings: "opsz" 96, "SOFT" 50, "WONK" 10;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Blockquotes: warm, restrained */
+blockquote {
+  border-left: 3px solid var(--link-color);
+  padding-left: 1.25rem;
+  color: var(--blockquote-text-color);
+  font-style: normal;
+}
+
+/* Tables: cleaner borders */
+.post-content table {
+  border: 1px solid var(--border-color);
+}
+
+.post-content table th,
+.post-content table td {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 0.9rem;
+}
+
+/* ─── TOC (right sidebar) — quieter ───────────────────────────────────────── */
+
+#toc-wrapper {
+  font-family: "Inter", sans-serif;
+}
+
+#toc-wrapper .toc-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+}
+
+#toc-wrapper ::ng-deep .toc-link {
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+}
+
+/* ─── Mobile refinements ──────────────────────────────────────────────────── */
+
+@media (max-width: 849px) {
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  #post-list .card {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #post-list .card .card-body {
+    padding: 0.75rem 0 0 0;
+  }
+
+  .post .post-content {
+    font-size: 1rem;
+  }
+}
