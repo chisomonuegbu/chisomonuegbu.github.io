@@ -39,10 +39,10 @@ theme_mode: light
 # Avatar shown in the left sidebar. Place a square image at the path below
 # (recommended 512×512 PNG, transparent background). For Phase 1 a typographic
 # placeholder is fine; replace with a hand-drawn mark in Phase 4.
-avatar: /assets/img/avatar.png
+avatar:
 
 # Open Graph image used when the site is shared on social media
-social_preview_image: /assets/img/og-image.png
+social_preview_image:
 
 toc: true   # right-sidebar TOC on posts
 
