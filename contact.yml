@@ -1,0 +1,25 @@
+# Left-sidebar social/contact icons. Comment out anything you don't want shown.
+# The 'noopener' attribute is added automatically.
+
+- type: github
+  icon: "fab fa-github"
+  url: "https://github.com/chisomonuegbu"
+
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true
+  url: "mailto:chisom@chisomonuegbu.dev"
+
+- type: rss
+  icon: "fas fa-rss"
+  url: "/feed.xml"
+
+# Uncomment when you're ready to add these:
+#
+# - type: linkedin
+#   icon: "fab fa-linkedin-in"
+#   url: "https://linkedin.com/in/chisomonuegbu"
+#
+# - type: mastodon
+#   icon: "fab fa-mastodon"
+#   url: "https://mastodon.social/@chisomonuegbu"
