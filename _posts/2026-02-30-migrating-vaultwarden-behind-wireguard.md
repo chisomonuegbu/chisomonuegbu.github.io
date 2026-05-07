@@ -14,12 +14,6 @@ image:
 
 ---
 
-# Migrating Vaultwarden to Keycloak SSO: A Deep Dive
-
-*A technical account of migrating a self-hosted password manager from stock Vaultwarden to OIDCWarden with Keycloak SSO — what went smoothly, what didn't, and what the problems revealed about the underlying systems.*
-
----
-
 ## Background
 
 I run a self-hosted password manager on a VPS behind nginx, with Keycloak on a separate VPS behind Caddy. The goal was to connect the two: replace the stock `vaultwarden/server` image with `timshel/oidcwarden` and federate authentication through Keycloak using OpenID Connect.
