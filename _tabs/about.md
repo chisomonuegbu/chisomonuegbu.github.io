@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Chisom — an engineer who spends most of his time on infrastructure, DevOps, and a homelab that has grown more serious than it was supposed to.
+I'm Chisom — an engineer who spends most of his time on infrastructure, DevOps, and a home lab that has grown more serious than it was supposed to.
 
 This site is where I write the work down. Posts fall into three buckets:
 
