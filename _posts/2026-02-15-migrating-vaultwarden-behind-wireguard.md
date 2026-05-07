@@ -1,6 +1,6 @@
 ---
 title: Migrating Vaultwarden behind WireGuard
-date: 2026-05-12 09:00:00 -0400
+date: 2026-02-15 09:00:00 -0400
 categories: [Deep Dives]
 tags: [homelab, security, wireguard, vaultwarden]
 image:
