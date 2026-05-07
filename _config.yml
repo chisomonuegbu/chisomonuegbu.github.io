@@ -124,12 +124,12 @@ defaults:
     values:
       comments: false
 
-  # - scope:
-  #     path: ""
-  #     type: tabs
-  #   values:
-  #     layout: page
-  #     permalink: /:title/
+# - scope:
+#     path: ""
+#     type: tabs
+#   values:
+#     layout: page
+#     permalink: /:title/
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Jekyll
