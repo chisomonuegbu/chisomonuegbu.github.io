@@ -219,7 +219,7 @@
 <text x="916" y="320" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="18" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)"><tspan style="">Telegram</tspan></text>
 <text x="916" y="342" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="14" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)"><tspan style="">sendMessage</tspan></text>
 <text x="660" y="575" dominant-baseline="hanging" font-family="&quot;Shadows Into Light&quot;, cursive" font-size="22" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)" transform="rotate(-2 779 586.5)"><tspan style="">↑ that's the whole automation.</tspan></text>
-<text x="1030" y="248" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="20" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)" transform="rotate(8 1094 258.5)"><tspan style="">sendMessage()</tspan></text>
+<text x="1030" y="248" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="20" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)" transform="rotate(8 1097 258.5)"><tspan style="">sendMessage()</tspan></text>
 <text x="1208" y="292" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)"><tspan style="">Telegram · now</tspan></text>
 <text x="1208" y="314" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="17" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)"><tspan style="">📨 mail from boss@</tspan></text>
 <text x="1208" y="338" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="14" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)"><tspan style="">&quot;quick question about the deck…&quot;</tspan></text>
@@ -227,10 +227,10 @@
 <text x="1270" y="534" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="15" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)"><tspan style="">on it 🫡</tspan></text>
 <text x="1456" y="360" dominant-baseline="hanging" font-family="&quot;Shadows Into Light&quot;, cursive" font-size="26" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)" transform="rotate(8 1483 373.5)"><tspan style="">bzzt.</tspan></text>
 <text x="1462" y="410" dominant-baseline="hanging" font-family="&quot;Shadows Into Light&quot;, cursive" font-size="22" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)" transform="rotate(6 1485 421.5)"><tspan style="">bzzt.</tspan></text>
-<text x="130" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)">Gmail</text>
-<text x="470" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)">Trigger</text>
-<text x="730" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)">Filter sender</text>
-<text x="1010" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)">Telegram bot</text>
-<text x="1240" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="16" font-weight="400" font-style="normal" fill="rgb(29, 34, 48)">Pocket buzz</text>
+<text x="130" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="25" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)">Gmail</text>
+<text x="470" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="25" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)">Trigger</text>
+<text x="730" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="25" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)">Filter sender</text>
+<text x="1010" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="25" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)">Telegram bot</text>
+<text x="1240" y="841" dominant-baseline="hanging" font-family="Kalam, cursive" font-size="25" font-weight="700" font-style="normal" fill="rgb(29, 34, 48)">Pocket buzz</text>
 <text x="1572" y="882" dominant-baseline="hanging" font-family="&quot;Shadows Into Light&quot;, cursive" font-size="18" font-weight="400" font-style="normal" fill="rgb(58, 66, 83)"></text>
 </svg>
