@@ -28,6 +28,9 @@ Gmail doesn't natively integrate with Telegram. It offers push notifications to 
 
 I went with n8n, and decided to build two variants of the same workflow: one using polling and one using push. Partly for redundancy, partly to see the latency difference firsthand.
 
+![Diagram of the Gmail-to-Telegram Alert System](/assets/img/posts/n8n-gmail-telegram-hero-latest.svg)
+
+
 ### A Note on n8n's Gmail Integration
 
 Early in the research, I assumed n8n's Gmail Trigger node used webhooks or Pub/Sub for real-time delivery. It doesn't. The node polls Gmail at a configurable interval — every minute in production. That's an important distinction: the polling flow is simple but introduces up to 60 seconds of delay. For truly instant notifications, you need the Pub/Sub path, which n8n supports through its generic Webhook node but doesn't abstract for you.
